@@ -57,7 +57,13 @@ document.getElementById('addToWishlistButton').addEventListener('click', functio
 }, false);
 
 document.getElementById('addToCartButton').addEventListener('click', function() {
-  fbq('track', 'AddToCart');
+  fbq('track', 'AddToCart', {
+    value: '115',
+    currency: 'USD',
+    content_ids: ['123456'],
+    content_type: 'product',
+    source: 'marketingClient'
+  });
 }, false);
 
 document.getElementById('checkoutButton').addEventListener('click', function() {
